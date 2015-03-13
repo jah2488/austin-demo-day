@@ -24,7 +24,7 @@ Demo day is cool and tomorrow!</h1>
 {% assign show = (site.pages | where: "cohort" , "spring-2015" | where: "course", "ruby" ) %}
 {% for page in show %}
     <li>
-    <div class="student-photo"><img src="{{site.url}}/images/{{page.cohort}}/{{page.id}}.jpg" alt="photo for {{page.student}}"></div>
+    <div class="student-photo"><img src="{{site.url}}/{{site.baseurl}}/images/{{page.cohort}}/{{page.id}}.jpg" alt="photo for {{page.student}}"></div>
     <div class="student-info">
       <h4 class="name">{{ page.student }},
       <span class="course">{{ page.course }}</span></h4>
@@ -40,7 +40,7 @@ Demo day is cool and tomorrow!</h1>
 {% assign show = (site.pages | where: "cohort" , "spring-2015" | where: "course", "front-end" ) %}
 {% for page in show %}
     <li>
-    <div class="student-photo"><img src="{{site.url}}/images/{{page.cohort}}/{{page.id}}.jpg" alt="photo for {{page.student}}"></div>
+    <div class="student-photo"><img src="{{site.url}}/{{site.baseurl}}/images/{{page.cohort}}/{{page.id}}.jpg" alt="photo for {{page.student}}"></div>
     <div class="student-info">
       <h4 class="name">{{ page.student }},
       <span class="course">{{ page.course }}</span></h4>
