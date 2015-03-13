@@ -234,3 +234,42 @@
         }
     }
 }
+.hero {
+    width: 100%;
+    min-height: 400px;
+    background: black;
+    color: white;
+}
+
+.course-col {
+    box-sizing: border-box;
+    border-right: 5px gray solid;
+    width: 50%;
+    float: left;
+    overflow: hidden;
+    padding: 1.25em 4%;
+    &:nth-of-type(2n) {
+        border-right: 0px gray solid;
+    }
+    li {
+        list-style-type: none;
+        float: left;
+        overflow: hidden;
+    }
+    img {
+        max-width: 100%;
+    }
+    .student-photo {
+    width: 40%;
+    float: left;
+
+    }
+
+    .student-info {
+    float: left;
+    width: 55%;
+    margin-left: 5%;
+    }
+}
+
+
