@@ -6,5 +6,3 @@ course: design
 bio: she is cool.
 ---
 
-<img src="{{ site.url}}/images/{{page.cohort}}/{{page.id}}.jpg" alt="photo for {{page.name}}">
-
