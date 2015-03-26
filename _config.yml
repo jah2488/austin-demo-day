@@ -3,9 +3,7 @@ title: The Iron Yard Austin
 email: austin@theironyard.com
 description: > # this means to ignore newlines until "baseurl:"
   The Iron Yard Austin offers full time 12-week courses on Front End Engineering, Ruby on Rails, and UI Design.
-
 baseurl: "" # the subpath of your site, e.g. /blog/
-
 url: "http://www.austindemoday.com" # the base hostname & protocol for your site
 twitter_username: theironyard
 github_username: theironyard
