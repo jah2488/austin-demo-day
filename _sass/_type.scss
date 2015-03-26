@@ -1,0 +1,130 @@
+h1, h2, h3, h4, h5, h6 {
+font-family: "proxima-nova", sans-serif;
+font-style: normal;
+font-weight: 100;
+line-height: 1.2;
+}
+
+h1 {
+    font-size: 3.1em;
+    font-weight: 800;
+}
+
+h2 {
+	  font-size: 2.5em;
+    font-weight: 800;
+    	margin-bottom: 1em;
+        text-align: center;
+}
+h3 /* Student Names */ {
+    font-size: 2.1em;
+    	text-transform: capitalize;
+    	margin-bottom: 1em;
+}
+
+h4 /* Student Names */ {
+    font-size: 1.7em;
+    	text-transform: capitalize;
+}
+
+p, ul, ol {
+	font-size: 1.3rem;
+}
+
+
+ .bio {
+        color: lighten($gray, 25%);
+        font-size: 1.1rem;
+        font-weight: 400;
+}
+
+
+
+
+/**
+ * Links
+ */
+a {
+    color: $callout;
+    text-decoration: none;
+
+    &:visited {
+        color: $callout;
+    }
+
+    &:hover {
+        color: darken($callout, 15%);
+        text-decoration: underline;
+    }
+}
+.ruby{
+	.course{
+	color: $ruby-base;
+	text-transform: capitalize;
+	}
+}
+
+.fee{
+	.course{
+	color: $fee-base;
+	text-transform: capitalize;
+	}
+}
+
+
+/**
+ * Blockquotes
+ */
+blockquote {
+
+
+    font-size: 18px;
+    letter-spacing: -1px;
+    font-style: italic;
+
+    > :last-child {
+        margin-bottom: 0;
+    }
+}
+
+.default {
+    .hero {
+
+    }
+    h1, h2, h3, h4, h5, h6, p, ul, ol {
+        max-width: 700px;
+        margin: 0 auto;
+    }
+p,ol,ul{
+          margin-bottom: 2em;
+}
+    h2 {
+        text-align: left;
+    }
+}
+
+/**
+ * Code formatting
+ */
+pre,
+code {
+    font-size: 15px;
+    border: 1px solid #eef;
+    border-radius: 3px;
+    background-color: #eef;
+}
+
+code {
+    padding: 1px 5px;
+}
+
+pre {
+    padding: 8px 12px;
+    overflow-x: scroll;
+
+    > code {
+        border: 0;
+        padding-right: 0;
+        padding-left: 0;
+    }
+}

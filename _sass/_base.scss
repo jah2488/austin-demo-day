@@ -1,42 +1,19 @@
-/**
- * Reset some basic elements
- */
-body, h1, h2, h3, h4, h5, h6,
-p, li, blockquote, pre, hr,
-dl, dd, ol, ul, figure {
-    margin: 0;
-    padding: 0;
-}
 
-
-
-/**
- * Basic styling
- */
 body {
-    font-family: $base-font-family;
-    font-size: $base-font-size;
-    line-height: $base-line-height;
-    font-weight: 300;
-    color: $text-color;
-    background-color: $background-color;
+    font-size: 16px;
+    line-height: 1.6;
+    font-weight: 400;
+    color: $base;
+    background-color: #f6f6f6;
     -webkit-text-size-adjust: 100%;
+font-family: "proxima-nova", sans-serif;
+font-style: normal;
 }
-
-
-
-/**
- * Set `margin-bottom` to maintain vertical rhythm
- */
-h1, h2, h3, h4, h5, h6,
-p, blockquote, pre,
-ul, ol, dl, figure,
-%vertical-rhythm {
-    margin-bottom: $spacing-unit / 2;
+.center {
+  display: block;
+  margin: 0 auto;
+  width: 516px;
 }
-
-
-
 /**
  * Images
  */
@@ -46,7 +23,10 @@ img {
 }
 
 
-
+.logo {
+top: 8px;
+  position: absolute;
+}
 /**
  * Figures
  */
@@ -54,119 +34,7 @@ figure > img {
     display: block;
 }
 
-figcaption {
-    font-size: $small-font-size;
-}
 
-
-
-/**
- * Lists
- */
-
-
-li {
-    > ul,
-    > ol {
-         margin-bottom: 0;
-    }
-}
-
-
-
-/**
- * Headings
- */
-h1, h2, h3, h4, h5, h6 {
-    font-weight: 300;
-}
-
-
-
-/**
- * Links
- */
-a {
-    color: $brand-color;
-    text-decoration: none;
-
-    &:visited {
-        color: darken($brand-color, 15%);
-    }
-
-    &:hover {
-        color: $text-color;
-        text-decoration: underline;
-    }
-}
-
-
-
-/**
- * Blockquotes
- */
-blockquote {
-    color: $grey-color;
-    border-left: 4px solid $grey-color-light;
-    padding-left: $spacing-unit / 2;
-    font-size: 18px;
-    letter-spacing: -1px;
-    font-style: italic;
-
-    > :last-child {
-        margin-bottom: 0;
-    }
-}
-
-
-
-/**
- * Code formatting
- */
-pre,
-code {
-    font-size: 15px;
-    border: 1px solid $grey-color-light;
-    border-radius: 3px;
-    background-color: #eef;
-}
-
-code {
-    padding: 1px 5px;
-}
-
-pre {
-    padding: 8px 12px;
-    overflow-x: scroll;
-
-    > code {
-        border: 0;
-        padding-right: 0;
-        padding-left: 0;
-    }
-}
-
-
-
-/**
- * Wrapper
- */
-.wrapper {
-    max-width: -webkit-calc(#{$content-width} - (#{$spacing-unit} * 2));
-    max-width:         calc(#{$content-width} - (#{$spacing-unit} * 2));
-    margin-right: auto;
-    margin-left: auto;
-    padding-right: $spacing-unit;
-    padding-left: $spacing-unit;
-    @extend %clearfix;
-
-    @include media-query($on-laptop) {
-        max-width: -webkit-calc(#{$content-width} - (#{$spacing-unit}));
-        max-width:         calc(#{$content-width} - (#{$spacing-unit}));
-        padding-right: $spacing-unit / 2;
-        padding-left: $spacing-unit / 2;
-    }
-}
 
 
 
@@ -196,7 +64,154 @@ pre {
         vertical-align: middle;
 
         path {
-            fill: $grey-color;
+            fill: $gray;
         }
     }
+}
+
+.wrapper {
+    position: relative;
+    max-width: 1140px;
+    margin: 0 auto;
+
+}
+/**
+ * Site header
+ */
+.site-header {
+    border-left: 1px solid $gray;
+    padding: 1.5em;
+    overflow: hidden;
+}
+
+.site-title {
+    font-size: 26px;
+    line-height: 56px;
+    letter-spacing: -1px;
+    margin-bottom: 0;
+    float: left;
+    &,
+    &:visited {
+        color: $gray;
+    }
+}
+
+.site-nav {
+    float: right;
+    .menu-icon {
+        display: none;
+    }
+
+    .page-link {
+        color: $callout;
+        // Gaps between nav items, but not on the first one
+        &:not(:first-child) {
+            margin-left: 20px;
+        }
+    }
+
+}
+
+.hero {
+    background: black;
+      width: 80%;
+  padding: 100px 10%;
+  height: 200px;
+    color: white;
+    margin-bottom: 2em;
+    background-size: cover;
+    background-position: center center;
+}
+
+.front-end {
+  .hero {
+     background-image: -webkit-linear-gradient(right bottom, rgba(206, 131, 44, 0.85), rgba(206, 131, 44, 0.85)), url(../images/students2.jpg);
+    background-image: linear-gradient(to left top, rgba(206, 131, 44, 0.85), rgba(206, 131, 44, 0.85)), url(../images/students2.jpg);
+  }
+
+}
+.workshops {
+  .hero {
+    background-image: -webkit-linear-gradient(right bottom, rgba(32,47,55, 0.85), rgba(32,47,55, 0.85)), url(../images/workshop.jpg);
+    background-image: linear-gradient(to left top, rgba(32,47,55, 0.85), rgba(32,47,55, 0.85)), url(../images/workshop.jpg);
+  }
+}
+
+.rails {
+  .hero {
+    background-image: -webkit-linear-gradient(right bottom, rgba(184, 89, 76, 0.85), rgba(184, 89, 76, 0.85)), url(../images/students1.jpg);
+    background-image: linear-gradient(to left top, rgba(184, 89, 76, 0.85), rgba(184, 89, 76, 0.85)), url(../images/students1.jpg);
+  }
+}
+
+.About {
+  .hero {
+  background-image: -webkit-linear-gradient(right bottom, rgba(32,47,55, 0.85), rgba(32,47,55, 0.85)), url(../images/texas.jpg);
+    background-image: linear-gradient(to left top, rgba(32,47,55, 0.85), rgba(32,47,55, 0.85)), url(../images/texas.jpg);
+  }
+}
+.cohort {
+
+    .hero {
+
+  background-image: url(../images/group1.jpg);
+
+  -webkit-animation: imggradient 15s linear infinite;
+          animation: imggradient 25s linear infinite;
+          a {
+            color: rgb(32,47,55);
+
+          }
+}
+
+@-webkit-keyframes imggradient {
+  0%, 100% {
+    background-image: -webkit-linear-gradient(right bottom, rgba(206, 131, 44, 0.85), rgba(206, 131, 44, 0.85)), url(../images/group1.jpg);
+    background-image: linear-gradient(to left top, rgba(206, 131, 44, 0.85), rgba(206, 131, 44, 0.85)), url(../images/group1.jpg);
+  }
+  33% {
+    background-image: -webkit-linear-gradient(right bottom, rgba(184, 89, 76, 0.85), rgba(184, 89, 76, 0.85)), url(../images/group2.jpg);
+    background-image: linear-gradient(to left top, rgba(184, 89, 76, 0.85), rgba(184, 89, 76, 0.85)), url(../images/group2.jpg);
+  }
+  66% {
+    background-image: -webkit-linear-gradient(right bottom, rgba(48, 161, 173, 0.85), rgba(48, 161, 173, 0.85)), url(../images/group3.jpg);
+    background-image: linear-gradient(to left top, rgba(48, 161, 173, 0.85), rgba(48, 161, 173, 0.85)), url(../images/group3.jpg);
+  }
+}
+
+@keyframes imggradient {
+  0%, 100% {
+    background-image: -webkit-linear-gradient(right bottom, rgba(206, 131, 44, 0.85), rgba(206, 131, 44, 0.85)), url(../images/group1.jpg);
+    background-image: linear-gradient(to left top, rgba(206, 131, 44, 0.85), rgba(206, 131, 44, 0.85)), url(../images/group1.jpg);
+  }
+  33% {
+    background-image: -webkit-linear-gradient(right bottom, rgba(184, 89, 76, 0.85), rgba(184, 89, 76, 0.85)), url(../images/group2.jpg);
+    background-image: linear-gradient(to left top, rgba(184, 89, 76, 0.85), rgba(184, 89, 76, 0.85)), url(../images/group2.jpg);
+  }
+  66% {
+    background-image: -webkit-linear-gradient(right bottom, rgba(48, 161, 173, 0.85), rgba(48, 161, 173, 0.85)), url(../images/group3.jpg);
+    background-image: linear-gradient(to left top, rgba(48, 161, 173, 0.85), rgba(48, 161, 173, 0.85)), url(../images/group3.jpg);
+  }
+}
+
+}
+
+footer {
+    clear: both;
+    overflow: hidden;
+    background-color: white;
+    padding-top: 2em;
+}
+
+
+.btn {
+  display: inline-block;
+  border-radius: 4px;
+  font-weight: bolder;
+  font-style: italic;
+  padding: 10px 20px 15px;
+  font-size: 24px;
+  text-decoration: none;
+  background: #39474e;
+  color: #fff;
 }

@@ -3,10 +3,11 @@
 
   {% include head.html %}
 
-  <body>
+  <body class="{{page.layout}} {{page.id}}">
 
     {% include header.html %}
-
+<div class="hero">
+</div>
     <div class="page-content">
       <div class="wrapper">
         {{ content }}
