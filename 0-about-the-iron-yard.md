@@ -16,7 +16,7 @@ The Iron Yard teaches intensive, 12-week courses that prepare you for a career a
 {% for page in show %}
  <li class="item">
  <div class="student-info">
-        <img class="student-photo" src="{{site.url}}{{site.baseurl}}/images/staff/{{page.id}}.jpg" alt="photo for {{page.staffname}}">
+        <img class="student-photo" src="{{site.url}}/images/staff/{{page.id}}.jpg" alt="photo for {{page.staffname}}">
       <h4 class="name">{{ page.staffname }},<br>
       {{ page.staffposition }}</h4>
       <p class="bio">{{ page.bio }}</p>
