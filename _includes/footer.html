@@ -53,9 +53,12 @@
 
 </footer>
 <script>
-var container = document.querySelector('.container');
-var msnry = new Masonry( container, {
-  itemSelector: '.item',
-  columnWidth: container.querySelector('.grid-sizer')
-});
+  document.onreadystatechange = function () {
+    if (document.readyState == 'complete') {
+      var container = document.querySelectorAll('.container');
+      var options   = { itemSelector: '.item' };
+      var msnryRB = new Masonry( container[0], options);
+      var msnryJS = new Masonry( container[1], options);
+    }
+  }
 </script>
