@@ -11,13 +11,32 @@ layout: cohort
 <div class="hero">
 <h3 style="margin-bottom:0">The Iron Yard Austin presents</h3>
 <h1>
-Ruby on Rails and Front End Demo Day</h1>
+Design Demo Day</h1>
 <h3>
-Friday, March 27, 2015<br>
+Friday, April 17th, 2015<br>
 2:00 PM — 4:00 PM (CDT)<br>
 3601 South Congress Ave Suite C-304 <a href="https://goo.gl/maps/KpHiO">[map]</a>
 </div>
 <div class="all-courses">
+<div class="course-col design">
+<h2>UI Design</h2>
+<ul class="container js-masonry"
+  data-masonry-options='{ "itemSelector": ".item" }'>
+  <div class="grid-sizer"></div>
+{% assign show = (site.pages | where: "cohort" , "spring-2015" | where: "course", "design" ) %}
+{% for page in show %}
+    <li class="item">
+
+    <div class="student-info">
+        <img class="student-photo" src="{{site.url}}{{site.baseurl}}/images/{{page.cohort}}/{{page.id}}.jpg" alt="photo for {{page.student}}">
+      <h4 class="name">{{ page.student }},<br>
+      <a class="course" href="design/">{{ page.course }}</a></h4>
+      <p class="bio">{{ page.bio }}</p>
+    </div>
+    </li>
+{% endfor %}
+</ul>
+</div>
 
 <div class="course-col ruby">
 <h2>Rails Engineering</h2>
